@@ -181,7 +181,7 @@ enum InAppPurchaseStatus {
         switch self {
         case .setProductIds: return "Product ids not set, call setProductIds method!"
         case .purchaseFailed: return "Product purchase failed!"
-        case .purchasing: return "Product purchasing!"
+        case .purchasing: return "Product purchasing in process!"
         case .disabled: return "Purchases are disabled in your device!"
         case .restored: return "You've successfully restored your purchase!"
         case .purchased: return "You've successfully bought this purchase!"
