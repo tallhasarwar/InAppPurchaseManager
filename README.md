@@ -7,7 +7,7 @@ To use just download and include InAppPurchaseManager.swift into your project
 
 # Buy single product with product ID
 To buy single product with Bundle Identifier call the method purchaseProductWithID and pass your product ID which you set on AppStoreConnect:
-
+```Swift
       InAppPurchaseManager.shared.purchaseProductWithID(productIdentifier: "Your Product ID here") { (status, product, transaction) in
           switch status {
             case .purchasing:
@@ -33,9 +33,10 @@ To buy single product with Bundle Identifier call the method purchaseProductWith
                 print(status.message)
           }
       }
+```
 # Get list of products with product IDs
 To get a list of products from app store with array of Bundle Identifier call the method fetchProductsList and pass array with product IDs which you set on AppStoreConnect:
-
+```Swift
         let listOfID = ["Your 1st product ID here","Your 2nd product ID here","Your 3rd product ID here"]
         
         InAppPurchaseManager.shared.fetchProductsList(productIDsList: listID) { (productsList) in 
@@ -45,11 +46,11 @@ To get a list of products from app store with array of Bundle Identifier call th
                 
         }
         
-
+```
                 
 # Purchase selected product 
 You can pass the selectedProduct to purchase method
-            
+  ```Swift          
           InAppPurchaseManager.shared.purchase(product: product!) { (status, product, transaction) in
 
               switch status {
@@ -77,4 +78,5 @@ You can pass the selectedProduct to purchase method
                     print(status.message)
               }
           }
+```
 If you want to add something, feel free to send me pull requests!
